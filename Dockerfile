@@ -6,5 +6,8 @@ RUN echo "deb http://emdebian.org/tools/debian/ jessie main" > /etc/apt/sources.
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		gcc-arm-linux-gnueabi \
+		linux-libc-dev-armel-cross \
+		libc6-armel-cross \
+		libc6-dev-armel-cross \
 		libusb-dev \
 	&& rm -rf /var/lib/apt/lists/*
