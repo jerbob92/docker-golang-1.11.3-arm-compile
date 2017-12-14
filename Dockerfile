@@ -1,4 +1,4 @@
-FROM golang:1.9.2
+FROM golang:1.9.2-stretch
 
 RUN echo "deb http://emdebian.org/tools/debian/ jessie main" > /etc/apt/sources.list.d/crosstools.list \
 	curl http://emdebian.org/tools/debian/emdebian-toolchain-archive.key | sudo apt-key add - \
