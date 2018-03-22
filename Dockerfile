@@ -10,4 +10,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		libc6-armhf-cross \
 		libc6-dev-armhf-cross \
 		libusb-dev \
+		libxml2-dev \
 	&& rm -rf /var/lib/apt/lists/*
