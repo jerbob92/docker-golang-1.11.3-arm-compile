@@ -13,3 +13,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		libxml2-dev \
 		libxml2 \
 	&& rm -rf /var/lib/apt/lists/*
+
+RUN ldconfig
