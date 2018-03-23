@@ -4,15 +4,11 @@ RUN echo "deb http://emdebian.org/tools/debian/ jessie main" > /etc/apt/sources.
 	&& curl http://emdebian.org/tools/debian/emdebian-toolchain-archive.key | apt-key add - \
 	&& dpkg --add-architecture armhf
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
 		gcc-arm-linux-gnueabihf \
 		linux-libc-dev-armhf-cross \
 		libc6-armhf-cross \
 		libc6-dev-armhf-cross \
 		libusb-dev \
-		libxml2-dev \
+		libxml2-dev:armhf \
 	&& rm -rf /var/lib/apt/lists/*
-
-RUN apt-get build-dep -a armhf libxml2-dev
-
-RUN ldconfig
