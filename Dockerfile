@@ -13,4 +13,5 @@ RUN apt-get update && apt-get install -y \
 		libusb-1.0:armhf \
 		libusb-1.0 \
 		libxml2-dev:armhf \
+		libsystemd-dev \
 	&& rm -rf /var/lib/apt/lists/*
